@@ -1,0 +1,41 @@
+/***********************************************************************/
+/* PROBLEMA 01: MOVIMIENTO SOBRE PLANO INCLINADO
+/* Propósito: Calcular el tiempo en que un cuerpo tarda en deslizarse por toda la longitd del plano si son conocidos: la longitud del plano (L), el anuglo de inclinacion del plano (theta) y la gravedad (g) como una constante. 
+/* Entradas:longitud (L)
+/*          angulo (theta)
+/*         
+/* Salidas: tiempo (t)
+/*                   
+/* Programadores: Jose Osmin Barrera Ayala; BA14010
+/*                Alejandro Vladimir Portillo Argueta; PA14003
+/*                Rafael Eduardo Ascencio Alvarenga; AA 12011
+/*
+/* Nombre de Archivo:
+/* Fecha de Creación: 25/agosto/2019
+/* Compilador/IDE: gcc 9.2.0 -std=gnu++17 @ https://wandbox.org/
+/***********************************************************************/
+
+#include<iostream>
+#include<cmath>
+
+int main(void) {
+double L,           // longuitud en metros
+theta,             // angulo en grados
+T;               // tiempo que un cuerpo tarda en delizarse sobre el plano en segundos
+
+const double g=9.81,  // aceleracion de la gravedad en m/s2
+pi=3.14159265355;
+std:: cout<<"\nIngrese la longuitud del plano en metros:"; std::cin>>L;  // entradas de datos de la longuitud del plano por el usuario
+std:: cout<<"\nIngrese el angulo de inclinacion en grados:"; std::cin>>theta; // entrada del angulo de inclinacion por el usuario
+theta= theta*pi/180;
+ T=sqrt((2*L)/(g*sin(theta))); 
+   
+ 
+ std:: cout<<"\nEl tiempo en segundos que tarda el cuerpo en desplazarse por el plano es:"<<T;
+
+ 
+ 
+
+
+return 0;
+}
